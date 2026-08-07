@@ -1,465 +1,193 @@
 /* ==========================================================
-   SITE DE CASAMENTO
-   Dayane & Thoigo
-   Tema Rancho Barthô
+   CONVITE DAYANE & THOIGO
 ========================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
     iniciarMusica();
-
-    iniciarEnvelope();
-
+    iniciarConvite();
     iniciarContagem();
-
-    iniciarRolagem();
+    iniciarLightbox();
+    iniciarAnimacoes();
 
 });
 
-
-/* ==========================================================
+/* ==========================
    MÚSICA
-========================================================== */
+========================== */
 
-function iniciarMusica(){
+function iniciarMusica() {
 
     const musica = document.getElementById("musica");
-
     const botao = document.getElementById("musicButton");
+
+    if (!musica || !botao) return;
 
     let tocando = false;
 
-    botao.addEventListener("click",()=>{
+    botao.addEventListener("click", () => {
 
-        if(tocando){
-
+        if (tocando) {
             musica.pause();
-
-            botao.innerHTML="🎵";
-
+            botao.innerHTML = "🎵";
+        } else {
+            musica.play().catch(() => {});
+            botao.innerHTML = "⏸";
         }
 
-        else{
-
-            musica.play();
-
-            botao.innerHTML="⏸";
-
-        }
-
-        tocando=!tocando;
+        tocando = !tocando;
 
     });
 
 }
 
+/* ==========================
+   ABERTURA DO CONVITE
+========================== */
 
-/* ==========================================================
-   ABRIR CONVITE
-========================================================== */
+function iniciarConvite() {
 
-function iniciarEnvelope(){
+    const selo = document.getElementById("selo");
+    const inicio = document.getElementById("inicio");
+    const convite = document.getElementById("convite");
+    const musica = document.getElementById("musica");
 
-    const abrir=document.getElementById("abrirConvite");
+    if (!selo || !inicio || !convite) return;
 
-    const abertura=document.getElementById("abertura");
+    convite.style.display = "none";
 
-    const envelope=document.getElementById("envelopeSection");
+    selo.addEventListener("click", () => {
 
-    abrir.addEventListener("click",()=>{
+        selo.classList.add("quebrar");
 
-        abertura.style.opacity="0";
+        setTimeout(() => {
 
-        abertura.style.pointerEvents="none";
+            inicio.style.display = "none";
 
-        setTimeout(()=>{
+            convite.style.display = "block";
 
-            envelope.scrollIntoView({
-
-                behavior:"smooth"
-
+            convite.scrollIntoView({
+                behavior: "smooth"
             });
 
-        },600);
+            if (musica) {
+                musica.play().catch(() => {});
+                document.getElementById("musicButton").innerHTML = "⏸";
+            }
+
+        }, 700);
 
     });
 
 }
 
+/* ==========================
+   CONTAGEM REGRESSIVA
+========================== */
 
-/* ==========================================================
-   CONTAGEM
-========================================================== */
+function iniciarContagem() {
 
-function iniciarContagem(){
+    const dataCasamento = new Date("2026-11-14T18:30:00");
 
-    const destino=new Date("November 14, 2026 18:30:00").getTime();
+    function atualizar() {
 
-    setInterval(()=>{
+        const agora = new Date();
 
-        const agora=new Date().getTime();
+        const diferenca = dataCasamento - agora;
 
-        const diferenca=destino-agora;
+        if (diferenca <= 0) return;
 
-        if(diferenca<=0){
+        const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
 
-            document.getElementById("dias").innerHTML="00";
+        const horas = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
 
-            document.getElementById("horas").innerHTML="00";
+        const minutos = Math.floor((diferenca / (1000 * 60)) % 60);
 
-            document.getElementById("minutos").innerHTML="00";
+        const segundos = Math.floor((diferenca / 1000) % 60);
 
-            document.getElementById("segundos").innerHTML="00";
+        document.getElementById("dias").textContent = dias;
+        document.getElementById("horas").textContent = horas;
+        document.getElementById("minutos").textContent = minutos;
+        document.getElementById("segundos").textContent = segundos;
 
-            return;
+    }
 
-        }
+    atualizar();
 
-        const dias=Math.floor(diferenca/(1000*60*60*24));
-
-        const horas=Math.floor(
-
-            (diferenca%(1000*60*60*24))
-
-            /(1000*60*60)
-
-        );
-
-        const minutos=Math.floor(
-
-            (diferenca%(1000*60*60))
-
-            /(1000*60)
-
-        );
-
-        const segundos=Math.floor(
-
-            (diferenca%(1000*60))
-
-            /1000
-
-        );
-
-        document.getElementById("dias").innerHTML=dias;
-
-        document.getElementById("horas").innerHTML=horas;
-
-        document.getElementById("minutos").innerHTML=minutos;
-
-        document.getElementById("segundos").innerHTML=segundos;
-
-    },1000);
+    setInterval(atualizar, 1000);
 
 }
 
+/* ==========================
+   LIGHTBOX
+========================== */
 
-/* ==========================================================
-   ROLAGEM SUAVE
-========================================================== */
+function iniciarLightbox() {
 
-function iniciarRolagem(){
+    const imagens = document.querySelectorAll(".gridGaleria img");
 
-    const links=document.querySelectorAll("a[href^='#']");
+    const lightbox = document.getElementById("lightbox");
 
-    links.forEach(link=>{
+    const imagem = document.getElementById("imagemLightbox");
 
-        link.addEventListener("click",(e)=>{
+    const fechar = document.getElementById("fecharLightbox");
 
-            e.preventDefault();
+    if (!lightbox) return;
 
-            const destino=document.querySelector(
+    imagens.forEach((foto) => {
 
-                link.getAttribute("href")
+        foto.addEventListener("click", () => {
 
-            );
+            imagem.src = foto.src;
 
-            if(destino){
-
-                destino.scrollIntoView({
-
-                    behavior:"smooth"
-
-                });
-
-            }
+            lightbox.classList.add("mostrar");
 
         });
 
     });
 
-}
+    fechar.addEventListener("click", () => {
 
+        lightbox.classList.remove("mostrar");
 
-/* ==========================================================
-   ANIMAÇÃO DE ENTRADA
-========================================================== */
+    });
 
-window.addEventListener("scroll",()=>{
+    lightbox.addEventListener("click", (e) => {
 
-    const elementos=document.querySelectorAll(
+        if (e.target === lightbox) {
 
-        ".card,.item,.fotos img,.caixaMensagem"
-
-    );
-
-    elementos.forEach(item=>{
-
-        const topo=item.getBoundingClientRect().top;
-
-        if(topo<window.innerHeight-120){
-
-            item.classList.add("fade");
+            lightbox.classList.remove("mostrar");
 
         }
 
     });
 
-});
-
-/* ==========================================================
-   SCRIPT.JS - PARTE 2
-   Recursos avançados
-========================================================== */
-
-
-/* ==========================================================
-   LIGHTBOX DA GALERIA
-========================================================== */
-
-const imagens = document.querySelectorAll(".fotos img");
-
-const lightbox = document.createElement("div");
-
-lightbox.id = "lightbox";
-
-lightbox.innerHTML = `
-    <span id="fecharLightbox">&times;</span>
-    <img id="imagemLightbox">
-`;
-
-document.body.appendChild(lightbox);
-
-const imagemGrande = document.getElementById("imagemLightbox");
-
-imagens.forEach(img => {
-
-    img.addEventListener("click", () => {
-
-        lightbox.classList.add("ativo");
-
-        imagemGrande.src = img.src;
-
-    });
-
-});
-
-lightbox.addEventListener("click", () => {
-
-    lightbox.classList.remove("ativo");
-
-});
-
-
-/* ==========================================================
-   INTERSECTION OBSERVER
-========================================================== */
-
-const observer = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add("fade");
-
-        }
-
-    });
-
-},{threshold:.20});
-
-document.querySelectorAll("section").forEach(sec=>{
-
-    observer.observe(sec);
-
-});
-
-
-/* ==========================================================
-   PARTÍCULAS DOURADAS
-========================================================== */
-
-function criarParticulas(){
-
-    setInterval(()=>{
-
-        const p=document.createElement("span");
-
-        p.className="particula";
-
-        p.style.left=Math.random()*100+"vw";
-
-        p.style.animationDuration=
-
-            (6+Math.random()*8)+"s";
-
-        document.body.appendChild(p);
-
-        setTimeout(()=>{
-
-            p.remove();
-
-        },15000);
-
-    },450);
-
 }
 
-criarParticulas();
+/* ==========================
+   ANIMAÇÕES AO ROLAR
+========================== */
 
+function iniciarAnimacoes() {
 
-/* ==========================================================
-   PARALLAX
-========================================================== */
+    const elementos = document.querySelectorAll("section");
 
-window.addEventListener("scroll",()=>{
+    const observer = new IntersectionObserver((entradas) => {
 
-    document.querySelectorAll(".parallax")
+        entradas.forEach((entrada) => {
 
-    .forEach(item=>{
+            if (entrada.isIntersecting) {
 
-        let velocidade=.35;
+                entrada.target.classList.add("visivel");
 
-        item.style.backgroundPositionY=
+            }
 
-            (window.pageYOffset*velocidade)+"px";
+        });
 
+    }, {
+        threshold: 0.15
     });
 
-});
-
-
-/* ==========================================================
-   ABERTURA DO ENVELOPE
-========================================================== */
-
-const envelope = document.querySelector(".envelope");
-
-const convite = document.getElementById("convite");
-
-if(envelope && convite){
-
-    envelope.addEventListener("click",()=>{
-
-        envelope.style.transform="scale(.9) rotateX(20deg)";
-        envelope.style.opacity="0";
-
-        setTimeout(()=>{
-
-            envelope.parentElement.style.display="none";
-
-            convite.scrollIntoView({
-
-                behavior:"smooth"
-
-            });
-
-        },900);
-
-    });
+    elementos.forEach((item) => observer.observe(item));
 
 }
-
-
-/* ==========================================================
-   EFEITO DE DIGITAÇÃO
-========================================================== */
-
-function escreverTitulo(){
-
-    const titulo=document.querySelector(".tituloInicial h1");
-
-    if(!titulo) return;
-
-    const texto=titulo.innerText;
-
-    titulo.innerHTML="";
-
-    let i=0;
-
-    const intervalo=setInterval(()=>{
-
-        titulo.innerHTML+=texto.charAt(i);
-
-        i++;
-
-        if(i>=texto.length){
-
-            clearInterval(intervalo);
-
-        }
-
-    },90);
-
-}
-
-escreverTitulo();
-
-
-/* ==========================================================
-   BOTÕES
-========================================================== */
-
-document.querySelectorAll("button,a")
-
-.forEach(botao=>{
-
-    botao.addEventListener("mouseenter",()=>{
-
-        botao.style.transform="translateY(-3px)";
-
-    });
-
-    botao.addEventListener("mouseleave",()=>{
-
-        botao.style.transform="";
-
-    });
-
-});
-
-
-/* ==========================================================
-   ANO AUTOMÁTICO NO RODAPÉ
-========================================================== */
-
-const rodape=document.querySelector("footer p");
-
-if(rodape){
-
-    rodape.innerHTML+=
-
-    "<br><br>© "+new Date().getFullYear();
-
-}
-
-
-/* ==========================================================
-   PRELOAD DAS IMAGENS
-========================================================== */
-
-document.querySelectorAll("img").forEach(img=>{
-
-    const preload=new Image();
-
-    preload.src=img.src;
-
-});
-
-
-/* ==========================================================
-   FINAL
-========================================================== */
-
-console.log("Site Dayane & Thoigo carregado com sucesso ❤️");
