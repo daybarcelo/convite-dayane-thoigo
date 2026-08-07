@@ -64,3 +64,88 @@ section h2{
     margin-bottom:25px;
     font-family:'Cinzel',serif;
 }
+
+.hero{
+    text-align:center;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:70px;
+    color:#6b4b2a;
+    margin:20px 0;
+}
+
+.hero h2{
+    color:#7a5b3e;
+}
+
+.frase{
+    max-width:700px;
+    margin:20px auto 40px;
+    font-style:italic;
+    font-size:20px;
+    line-height:1.8;
+}
+
+.foto-principal{
+    display:flex;
+    justify-content:center;
+    margin:40px 0;
+}
+
+.foto-principal img{
+    width:90%;
+    max-width:700px;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.informacoes,
+.presentes,
+.confirmacao,
+.contagem{
+    background:#fffaf3;
+    border-radius:18px;
+    padding:40px;
+    margin:40px auto;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.botao{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:#7b5a35;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.botao:hover{
+    background:#5f4325;
+}
+
+.whatsapp{
+    background:#25D366;
+}
+
+.whatsapp:hover{
+    background:#1da851;
+}
+
+#contador{
+    font-size:34px;
+    font-weight:bold;
+    text-align:center;
+    margin-top:20px;
+}
+
+footer{
+    text-align:center;
+    padding:60px 25px;
+    background:#4f3a28;
+    color:#fff;
+    line-height:2;
+}
