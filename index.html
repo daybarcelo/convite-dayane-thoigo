@@ -1,123 +1,565 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dayane & Thoigo</title>
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="estilo.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Dayane & Thoigo | Nosso Casamento</title>
+
+    <meta name="description"
+        content="Você é nosso convidado especial para celebrar este momento inesquecível.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="estilo.css">
 
 </head>
 
 <body>
 
-<div id="envelope">
+    <!-- Música -->
+    <audio id="musica" loop>
+        <source src="musica/musica.mp3" type="audio/mpeg">
+    </audio>
 
-    <div class="frente">
-        <h2>💌</h2>
-        <h1>Dayane & Thoigo</h1>
+    <!-- Botão Música -->
+
+    <button id="musicButton">
+
+        🎵
+
+    </button>
+
+    <!-- Tela Inicial -->
+
+    <section id="abertura">
+
+        <div class="overlay"></div>
+
+        <div class="tituloInicial">
+
+            <h2>Rancho Barthô</h2>
+
+            <h1>Dayane & Thoigo</h1>
+
+            <p>
+
+                "O amor é paciente,
+
+                o amor é bondoso."
+
+            </p>
+
+            <button id="abrirConvite">
+
+                Abrir Convite
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Envelope -->
+
+    <section id="envelopeSection">
+
+        <div class="envelope">
+
+            <img src="img/envelope.png">
+
+            <img src="img/selo.png" class="selo">
+
+        </div>
+
+    </section>
+
+    <!-- Pergaminho -->
+
+    <section id="convite">
+
+        <div class="pergaminho">
+
+            <img src="img/pergaminho.png">
+
+            <div class="conteudoConvite">
+
+                <h3>Com muita alegria convidamos você</h3>
+
+                <h1>Dayane</h1>
+
+                <span>&</span>
+
+                <h1>Thoigo</h1>
+
+                <p>
+
+                    para celebrar conosco
+
+                    o dia mais importante de nossas vidas.
+
+                </p>
+
+                <div class="linha"></div>
+
+                <h2>14 de Novembro de 2026</h2>
+
+                <h3>18h30</h3>
+
+                <h4>
+
+                    Rancho Barthô
+
+                </h4>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contagem -->
+
+    <section id="contador">
+
+        <h2>Faltam</h2>
+
+        <div class="contador">
+
+            <div>
+
+                <span id="dias">00</span>
+
+                <small>Dias</small>
+
+            </div>
+
+            <div>
+
+                <span id="horas">00</span>
+
+                <small>Horas</small>
+
+            </div>
+
+            <div>
+
+                <span id="minutos">00</span>
+
+                <small>Minutos</small>
+
+            </div>
+
+            <div>
+
+                <span id="segundos">00</span>
+
+                <small>Segundos</small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Nossa História -->
+
+    <section id="historia">
+
+        <h2>Nossa História</h2>
+
+        <div class="timeline">
+
+            <div class="item">
+
+                <h3>Onde tudo começou</h3>
+
+                <p>
+
+                    Nosso encontro foi o início de uma linda jornada.
+
+                </p>
+
+            </div>
+
+            <div class="item">
+
+                <h3>Nosso Amor</h3>
+
+                <p>
+
+                    Entre sonhos, desafios e conquistas,
+
+                    Deus fortaleceu nossa união.
+
+                </p>
+
+            </div>
+
+            <div class="item">
+
+                <h3>O Grande Dia</h3>
+
+                <p>
+
+                    Agora queremos compartilhar
+
+                    este momento com você.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Galeria -->
+
+    <section id="galeria">
+
+        <h2>Momentos Especiais</h2>
+
+        <div class="fotos">
+
+            <img src="img/foto1.jpg">
+
+            <img src="img/foto2.jpg">
+
+            <img src="img/foto3.jpg">
+
+            <img src="img/foto4.jpg">
+
+            <img src="img/foto5.jpg">
+
+            <img src="img/foto6.jpg">
+
+        </div>
+
+    </section>
+        <!-- Cerimônia -->
+
+    <section id="cerimonia">
+
+        <div class="container">
+
+            <h2>Nosso Grande Dia</h2>
+
+            <p class="subtitulo">
+
+                Cada detalhe foi preparado com muito carinho para viver
+                este momento ao lado das pessoas que amamos.
+
+            </p>
+
+            <div class="cardsCerimonia">
+
+                <div class="card">
+
+                    <h3>💍 Cerimônia</h3>
+
+                    <p>
+                        14 de Novembro de 2026
+                    </p>
+
+                    <p>
+                        18h30
+                    </p>
+
+                    <p>
+                        Rancho Barthô
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>🍽 Recepção</h3>
+
+                    <p>
+                        Logo após a cerimônia
+                    </p>
+
+                    <p>
+
+                        Jantar Especial
+
+                    </p>
+
+                    <p>
+
+                        Música • Dança • Celebração
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- Local -->
+
+    <section id="local">
+
+        <h2>Como Chegar</h2>
 
         <p>
-            Toque para abrir o convite
+
+            Esperamos você para celebrar conosco.
+
         </p>
 
-        <button id="abrir">
-            Abrir Convite
-        </button>
+        <div class="mapa">
 
-    </div>
+            <!-- Cole aqui o iframe do Google Maps -->
 
-</div>
+            <iframe
+                src=""
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
 
-<div id="convite" style="display:none;">
+        </div>
 
-    <section class="hero">
+        <a
+            class="botaoMapa"
+            href="#"
+            target="_blank">
 
-    <h2>Nosso Casamento</h2>
+            Traçar Rota
 
-    <h1>Dayane & Thoigo</h1>
+        </a>
 
-    <p class="frase">
-        "O amor é paciente, o amor é bondoso."
-    </p>
+    </section>
 
-    <div class="foto-principal">
-        <img src="imagens/casal1.jpg" alt="Dayane e Thoigo">
-    </div>
 
-</section>
 
-<section class="informacoes">
 
-<h2>Informações</h2>
 
-<p><strong>Data:</strong> 14 de Novembro</p>
 
-<p><strong>Horário:</strong> 18h30</p>
+    <!-- Dress Code -->
 
-<p><strong>Local:</strong> ASJOSP - Associação dos Servidores do Fórum de Sinop</p>
+    <section id="dresscode">
 
-<a class="botao" href="https://maps.app.goo.gl/Hs6HetWTcyVRTXt17" target="_blank">
-📍 Ver localização
-</a>
+        <h2>Traje Sugerido</h2>
 
-</section>
+        <div class="dress">
 
-<section class="presentes">
+            <div>
 
-<h2>Lista de Presentes</h2>
+                <h3>👔 Homens</h3>
 
-<p>Se desejar nos presentear, nossa lista está disponível no Casar.com.</p>
+                <p>
 
-<a class="botao" href="https://noivos.casar.com/dayane-e-thoigo" target="_blank">
-🎁 Ver Lista de Presentes
-</a>
+                    Country Elegante
 
-</section>
+                    <br>
 
-<section class="confirmacao">
+                    Camisa
 
-<h2>Confirmação</h2>
+                    <br>
 
-<a class="botao whatsapp" href="https://wa.me/5566981094450" target="_blank">
-Confirmar presença
-</a>
+                    Jeans Escuro
 
-</section>
-<section class="contagem">
+                    <br>
 
-<h2>Faltam</h2>
+                    Bota
 
-<div id="contador">
-Carregando contagem...
-</div>
+                </p>
 
-</section>
+            </div>
 
-<footer>
+            <div>
 
-<p>
-"Embora ninguém possa voltar atrás e fazer um novo começo, qualquer um pode começar agora e fazer um novo fim."
-</p>
+                <h3>👗 Mulheres</h3>
 
-<p><strong>Chico Xavier</strong></p>
+                <p>
 
-<p>
-Com carinho,<br>
-<strong>Dayane & Thoigo</strong>
-</p>
+                    Vestidos em tons claros,
 
-</footer>
+                    lavanda,
 
-</div>
+                    nude,
 
-<script src="script.js"></script>
+                    verde oliva
+
+                    ou florais.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <!-- Lista -->
+
+    <section id="presentes">
+
+        <h2>Lista de Presentes</h2>
+
+        <p>
+
+            Sua presença é o nosso maior presente.
+
+            Mas, se desejar nos presentear,
+
+            preparamos uma lista com muito carinho.
+
+        </p>
+
+        <a
+
+            href="#"
+
+            target="_blank"
+
+            class="botaoPresentes">
+
+            🎁 Ver Lista no Casar.com
+
+        </a>
+
+    </section>
+
+
+
+
+
+
+    <!-- Confirmação -->
+
+    <section id="confirmacao">
+
+        <h2>Confirme sua Presença</h2>
+
+        <p>
+
+            Ficaremos muito felizes em comemorar este dia com você.
+
+        </p>
+
+        <a
+
+            href="#"
+
+            target="_blank"
+
+            class="botaoWhatsapp">
+
+            💬 Confirmar Presença
+
+        </a>
+
+    </section>
+
+
+
+
+
+
+    <!-- Mensagem -->
+
+    <section id="mensagem">
+
+        <div class="caixaMensagem">
+
+            <h2>
+
+                Obrigado!
+
+            </h2>
+
+            <p>
+
+                O amor nos uniu.
+
+                A amizade fortaleceu nossa caminhada.
+
+                Agora queremos celebrar este momento inesquecível
+                ao lado das pessoas que fazem parte da nossa história.
+
+            </p>
+
+            <h3>
+
+                Esperamos por você!
+
+            </h3>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <!-- Rodapé -->
+
+    <footer>
+
+        <div class="monograma">
+
+            D & T
+
+        </div>
+
+        <h2>
+
+            Dayane & Thoigo
+
+        </h2>
+
+        <p>
+
+            14 • Novembro • 2026
+
+        </p>
+
+        <p>
+
+            Feito com ❤ para celebrar o amor.
+
+        </p>
+
+    </footer>
+
+
+
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
