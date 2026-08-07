@@ -1,1 +1,66 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f3ead7;
+    color:#4b3826;
+}
+
+#envelope{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("imagens/fundo-country.jpg") center/cover no-repeat;
+}
+
+.frente{
+    background:#f8f0df;
+    padding:40px;
+    border-radius:12px;
+    text-align:center;
+    max-width:500px;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.frente h1{
+    font-family:'Great Vibes',cursive;
+    font-size:58px;
+    color:#6b4b2a;
+}
+
+.frente p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+button{
+    background:#7b5a35;
+    color:#fff;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+section{
+    padding:70px 25px;
+    max-width:1000px;
+    margin:auto;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:25px;
+    font-family:'Cinzel',serif;
+}
