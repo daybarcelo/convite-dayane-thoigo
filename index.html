@@ -3,60 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Dayane & Thoigo</title>
-<style>
-body{
-    margin:0;
-    font-family:Georgia, serif;
-    background:#f4efe5;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
-.caixa{
-    max-width:600px;
-    background:#fffaf0;
-    padding:40px;
-    border-radius:12px;
-    box-shadow:0 0 20px rgba(0,0,0,.2);
-    text-align:center;
-}
-h1{
-    color:#6b4b2a;
-}
-p{
-    font-size:18px;
-    color:#555;
-}
-button{
-    background:#7b5a35;
-    color:white;
-    border:none;
-    padding:15px 30px;
-    border-radius:30px;
-    font-size:18px;
-}
-</style>
+
+<link rel="stylesheet" href="estilo.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<div class="caixa">
+<div id="envelope">
 
-<h1>Dayane ❤️ Thoigo</h1>
+    <div class="frente">
+        <h2>💌</h2>
+        <h1>Dayane & Thoigo</h1>
 
-<p>
-Sejam bem-vindos ao nosso convite de casamento.
-</p>
+        <p>
+            Toque para abrir o convite
+        </p>
 
-<p>
-14 de Novembro de 2026
-</p>
+        <button id="abrir">
+            Abrir Convite
+        </button>
 
-<button>Abrir Convite</button>
+    </div>
 
 </div>
 
-</body>
-</html>
+<div id="convite" style="display:none;">
