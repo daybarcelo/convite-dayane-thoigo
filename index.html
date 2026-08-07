@@ -5,20 +5,18 @@
 
     <meta charset="UTF-8">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dayane & Thoigo | Nosso Casamento</title>
+    <title>Dayane & Thoigo | Convite de Casamento</title>
 
     <meta name="description"
-        content="Você é nosso convidado especial para celebrar este momento inesquecível.">
+        content="Você recebeu um convite especial para celebrar o casamento de Dayane & Thoigo.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="estilo.css">
@@ -28,143 +26,131 @@
 <body>
 
     <!-- Música -->
+
     <audio id="musica" loop>
+
         <source src="musica/musica.mp3" type="audio/mpeg">
+
     </audio>
 
     <!-- Botão Música -->
 
-    <button id="musicButton">
+    <button id="musicButton" aria-label="Controlar música">
 
         🎵
 
     </button>
 
-    <!-- Tela Inicial -->
+    <!-- ===========================
+         TELA INICIAL
+    ============================ -->
 
-    <section id="abertura">
+    <section id="inicio">
 
         <div class="overlay"></div>
 
-        <div class="tituloInicial">
+        <div class="conteudoInicio">
 
-            <h2>Rancho Barthô</h2>
+            <p class="textoConvite">
 
-            <h1>Dayane & Thoigo</h1>
-
-            <p>
-
-                "O amor é paciente,
-
-                o amor é bondoso."
+                Você recebeu um convite especial...
 
             </p>
 
-            <button id="abrirConvite">
+            <div class="envelope">
 
-                Abrir Convite
+                <img
+                    src="img/envelope.png"
+                    alt="Envelope">
 
-            </button>
+                <img
+                    src="img/selo.png"
+                    alt="Selo de Cera"
+                    id="selo">
+
+            </div>
+
+            <p class="toque">
+
+                Toque no selo para abrir.
+
+            </p>
 
         </div>
 
     </section>
 
-    <!-- Envelope -->
-
-    <section id="envelopeSection">
-
-        <div class="envelope">
-
-            <img src="img/envelope.png">
-
-            <img src="img/selo.png" class="selo">
-
-        </div>
-
-    </section>
-
-    <!-- Pergaminho -->
+    <!-- ===========================
+         CONVITE
+    ============================ -->
 
     <section id="convite">
 
         <div class="pergaminho">
 
-            <img src="img/pergaminho.png">
+            <img
+                src="img/pergaminho.png"
+                alt="Pergaminho">
 
-            <div class="conteudoConvite">
+            <div class="conteudoPergaminho">
 
-                <h3>Com muita alegria convidamos você</h3>
+                <h3>
 
-                <h1>Dayane</h1>
+                    Com alegria convidamos você para celebrar conosco.
+
+                </h3>
+
+                <h1>
+
+                    Dayane
+
+                </h1>
 
                 <span>&</span>
 
-                <h1>Thoigo</h1>
+                <h1>
 
-                <p>
+                    Thoigo
 
-                    para celebrar conosco
-
-                    o dia mais importante de nossas vidas.
-
-                </p>
+                </h1>
 
                 <div class="linha"></div>
 
-                <h2>14 de Novembro de 2026</h2>
+                <p>
 
-                <h3>18h30</h3>
+                    Temos a alegria de compartilhar um dos momentos
+                    mais importantes de nossas vidas e será uma honra
+                    contar com a sua presença.
 
-                <h4>
+                </p>
 
-                    Rancho Barthô
+                <div class="informacoes">
 
-                </h4>
+                    <div>
 
-            </div>
+                        <h4>Data</h4>
 
-        </div>
+                        <p>14 de Novembro de 2026</p>
 
-    </section>
+                    </div>
 
-    <!-- Contagem -->
+                    <div>
 
-    <section id="contador">
+                        <h4>Horário</h4>
 
-        <h2>Faltam</h2>
+                        <p>18h30</p>
 
-        <div class="contador">
+                    </div>
 
-            <div>
+                    <div>
 
-                <span id="dias">00</span>
+                        <h4>Local</h4>
 
-                <small>Dias</small>
+                        <p>Rancho Barthô</p>
 
-            </div>
+                    </div>
 
-            <div>
-
-                <span id="horas">00</span>
-
-                <small>Horas</small>
-
-            </div>
-
-            <div>
-
-                <span id="minutos">00</span>
-
-                <small>Minutos</small>
-
-            </div>
-
-            <div>
-
-                <span id="segundos">00</span>
-
-                <small>Segundos</small>
+                </div>
 
             </div>
 
@@ -172,391 +158,364 @@
 
     </section>
 
-    <!-- Nossa História -->
+    <!-- ===========================
+         NOSSA HISTÓRIA
+    ============================ -->
 
     <section id="historia">
 
-        <h2>Nossa História</h2>
-
-        <div class="timeline">
-
-            <div class="item">
-
-                <h3>Onde tudo começou</h3>
-
-                <p>
-
-                    Nosso encontro foi o início de uma linda jornada.
-
-                </p>
-
-            </div>
-
-            <div class="item">
-
-                <h3>Nosso Amor</h3>
-
-                <p>
-
-                    Entre sonhos, desafios e conquistas,
-
-                    Deus fortaleceu nossa união.
-
-                </p>
-
-            </div>
-
-            <div class="item">
-
-                <h3>O Grande Dia</h3>
-
-                <p>
-
-                    Agora queremos compartilhar
-
-                    este momento com você.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Galeria -->
-
-    <section id="galeria">
-
-        <h2>Momentos Especiais</h2>
-
-        <div class="fotos">
-
-            <img src="img/foto1.jpg">
-
-            <img src="img/foto2.jpg">
-
-            <img src="img/foto3.jpg">
-
-            <img src="img/foto4.jpg">
-
-            <img src="img/foto5.jpg">
-
-            <img src="img/foto6.jpg">
-
-        </div>
-
-    </section>
-        <!-- Cerimônia -->
-
-    <section id="cerimonia">
-
         <div class="container">
-
-            <h2>Nosso Grande Dia</h2>
-
-            <p class="subtitulo">
-
-                Cada detalhe foi preparado com muito carinho para viver
-                este momento ao lado das pessoas que amamos.
-
-            </p>
-
-            <div class="cardsCerimonia">
-
-                <div class="card">
-
-                    <h3>💍 Cerimônia</h3>
-
-                    <p>
-                        14 de Novembro de 2026
-                    </p>
-
-                    <p>
-                        18h30
-                    </p>
-
-                    <p>
-                        Rancho Barthô
-                    </p>
-
-                </div>
-
-                <div class="card">
-
-                    <h3>🍽 Recepção</h3>
-
-                    <p>
-                        Logo após a cerimônia
-                    </p>
-
-                    <p>
-
-                        Jantar Especial
-
-                    </p>
-
-                    <p>
-
-                        Música • Dança • Celebração
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-
-
-    <!-- Local -->
-
-    <section id="local">
-
-        <h2>Como Chegar</h2>
-
-        <p>
-
-            Esperamos você para celebrar conosco.
-
-        </p>
-
-        <div class="mapa">
-
-            <!-- Cole aqui o iframe do Google Maps -->
-
-            <iframe
-                src=""
-                width="100%"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
-
-        </div>
-
-        <a
-            class="botaoMapa"
-            href="#"
-            target="_blank">
-
-            Traçar Rota
-
-        </a>
-
-    </section>
-
-
-
-
-
-
-    <!-- Dress Code -->
-
-    <section id="dresscode">
-
-        <h2>Traje Sugerido</h2>
-
-        <div class="dress">
-
-            <div>
-
-                <h3>👔 Homens</h3>
-
-                <p>
-
-                    Country Elegante
-
-                    <br>
-
-                    Camisa
-
-                    <br>
-
-                    Jeans Escuro
-
-                    <br>
-
-                    Bota
-
-                </p>
-
-            </div>
-
-            <div>
-
-                <h3>👗 Mulheres</h3>
-
-                <p>
-
-                    Vestidos em tons claros,
-
-                    lavanda,
-
-                    nude,
-
-                    verde oliva
-
-                    ou florais.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-
-
-
-
-    <!-- Lista -->
-
-    <section id="presentes">
-
-        <h2>Lista de Presentes</h2>
-
-        <p>
-
-            Sua presença é o nosso maior presente.
-
-            Mas, se desejar nos presentear,
-
-            preparamos uma lista com muito carinho.
-
-        </p>
-
-        <a
-
-            href="#"
-
-            target="_blank"
-
-            class="botaoPresentes">
-
-            🎁 Ver Lista no Casar.com
-
-        </a>
-
-    </section>
-
-
-
-
-
-
-    <!-- Confirmação -->
-
-    <section id="confirmacao">
-
-        <h2>Confirme sua Presença</h2>
-
-        <p>
-
-            Ficaremos muito felizes em comemorar este dia com você.
-
-        </p>
-
-        <a
-
-            href="#"
-
-            target="_blank"
-
-            class="botaoWhatsapp">
-
-            💬 Confirmar Presença
-
-        </a>
-
-    </section>
-
-
-
-
-
-
-    <!-- Mensagem -->
-
-    <section id="mensagem">
-
-        <div class="caixaMensagem">
 
             <h2>
 
-                Obrigado!
+                Nossa História
+
+            </h2>
+
+            <div class="timeline">
+
+                <article class="evento">
+
+                    <h3>
+
+                        O início
+
+                    </h3>
+
+                    <p>
+
+                        Foi quando nossos caminhos se cruzaram
+                        e uma linda história começou.
+
+                    </p>
+
+                </article>
+
+                <article class="evento">
+
+                    <h3>
+
+                        O Amor
+
+                    </h3>
+
+                    <p>
+
+                        Entre sonhos, desafios e conquistas,
+                        fortalecemos nossa caminhada juntos.
+
+                    </p>
+
+                </article>
+
+                <article class="evento">
+
+                    <h3>
+
+                        O Grande Dia
+
+                    </h3>
+
+                    <p>
+
+                        Agora chegou o momento de celebrar
+                        essa nova etapa ao lado das pessoas
+                        que fazem parte da nossa história.
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ===========================
+         GALERIA
+    ============================ -->
+
+    <section id="galeria">
+
+        <div class="container">
+
+            <h2>Momentos Especiais</h2>
+
+            <p class="subtitulo">
+
+                Alguns registros da nossa caminhada até aqui.
+
+            </p>
+
+            <div class="gridGaleria">
+
+                <img src="img/foto1.jpg" alt="Foto do casal 1">
+
+                <img src="img/foto2.jpg" alt="Foto do casal 2">
+
+                <img src="img/foto3.jpg" alt="Foto do casal 3">
+
+                <img src="img/foto4.jpg" alt="Foto do casal 4">
+
+                <img src="img/foto5.jpg" alt="Foto do casal 5">
+
+                <img src="img/foto6.jpg" alt="Foto do casal 6">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===========================
+         CONTAGEM REGRESSIVA
+    ============================ -->
+
+    <section id="contador">
+
+        <div class="container">
+
+            <h2>Faltam apenas</h2>
+
+            <div class="contador">
+
+                <div class="tempo">
+
+                    <span id="dias">00</span>
+
+                    <small>Dias</small>
+
+                </div>
+
+                <div class="tempo">
+
+                    <span id="horas">00</span>
+
+                    <small>Horas</small>
+
+                </div>
+
+                <div class="tempo">
+
+                    <span id="minutos">00</span>
+
+                    <small>Minutos</small>
+
+                </div>
+
+                <div class="tempo">
+
+                    <span id="segundos">00</span>
+
+                    <small>Segundos</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===========================
+         LOCAL
+    ============================ -->
+
+    <section id="local">
+
+        <div class="container">
+
+            <h2>Local da Cerimônia</h2>
+
+            <p class="subtitulo">
+
+                Esperamos você para celebrar esse momento tão especial.
+
+            </p>
+
+            <div class="mapa">
+
+                <!-- Substitua o SRC pelo iframe do Google Maps -->
+
+                <iframe
+                    src=""
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <a
+                class="botao"
+                href="#"
+                target="_blank">
+
+                Como chegar
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===========================
+         LISTA DE PRESENTES
+    ============================ -->
+
+    <section id="presentes">
+
+        <div class="container">
+
+            <h2>Lista de Presentes</h2>
+
+            <p>
+
+                Sua presença será o nosso maior presente.
+
+                Caso deseje nos presentear, preparamos uma lista com muito carinho.
+
+            </p>
+
+            <a
+                href="#"
+                target="_blank"
+                class="botao">
+
+                Ver Lista de Presentes
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===========================
+         CONFIRMAÇÃO
+    ============================ -->
+
+    <section id="confirmacao">
+
+        <div class="container">
+
+            <h2>Confirme sua Presença</h2>
+
+            <p>
+
+                Sua confirmação é muito importante para nós.
+
+            </p>
+
+            <a
+                href="#"
+                target="_blank"
+                class="botao whatsapp">
+
+                Confirmar Presença
+
+            </a>
+
+        </div>
+
+    </section>
+        <!-- ===========================
+         MENSAGEM FINAL
+    ============================ -->
+
+    <section id="mensagemFinal">
+
+        <div class="container">
+
+            <h2>
+
+                Esperamos por você!
 
             </h2>
 
             <p>
 
-                O amor nos uniu.
-
-                A amizade fortaleceu nossa caminhada.
-
-                Agora queremos celebrar este momento inesquecível
-                ao lado das pessoas que fazem parte da nossa história.
+                Será uma grande alegria compartilhar este momento tão
+                especial ao lado de pessoas que fazem parte da nossa
+                história.
 
             </p>
-
-            <h3>
-
-                Esperamos por você!
-
-            </h3>
 
         </div>
 
     </section>
 
-
-
-
-
-
-
-    <!-- Rodapé -->
+    <!-- ===========================
+         RODAPÉ
+    ============================ -->
 
     <footer>
 
-        <div class="monograma">
+        <div class="container">
 
-            D & T
+            <div class="monograma">
+
+                D<span>&</span>T
+
+            </div>
+
+            <h3>
+
+                Dayane & Thoigo
+
+            </h3>
+
+            <p>
+
+                14 de Novembro de 2026
+
+            </p>
+
+            <p>
+
+                Feito com amor para celebrar o início de uma nova história.
+
+            </p>
 
         </div>
 
-        <h2>
-
-            Dayane & Thoigo
-
-        </h2>
-
-        <p>
-
-            14 • Novembro • 2026
-
-        </p>
-
-        <p>
-
-            Feito com ❤ para celebrar o amor.
-
-        </p>
-
     </footer>
 
+    <!-- ===========================
+         LIGHTBOX DA GALERIA
+    ============================ -->
 
+    <div id="lightbox" class="lightbox">
 
+        <button
+            id="fecharLightbox"
+            class="fecharLightbox"
+            aria-label="Fechar">
 
+            ×
+
+        </button>
+
+        <img
+            id="imagemLightbox"
+            src=""
+            alt="Foto ampliada">
+
+    </div>
+
+    <!-- ===========================
+         ELEMENTOS DECORATIVOS
+    ============================ -->
+
+    <div class="decoracao-lavanda lavanda-esquerda"></div>
+
+    <div class="decoracao-lavanda lavanda-direita"></div>
+
+    <!-- ===========================
+         SCRIPT
+    ============================ -->
 
     <script src="script.js"></script>
 
