@@ -1060,3 +1060,590 @@ img{
     transform:scale(1.05);
 
 }
+
+/* ===========================================================
+   ESTILO.CSS - PARTE 3A
+   Rodapé, mensagem final, animações e efeitos
+=========================================================== */
+
+/* ==========================
+   MENSAGEM FINAL
+========================== */
+
+#mensagem {
+    padding: 120px 20px;
+    background: linear-gradient(180deg, #fdfaf5, #efe5d6);
+}
+
+.caixaMensagem {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255,255,255,.92);
+    padding: 60px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: var(--sombra);
+}
+
+.caixaMensagem h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 64px;
+    color: var(--dourado);
+    margin-bottom: 20px;
+}
+
+.caixaMensagem p {
+    font-size: 20px;
+    color: var(--madeira);
+    margin-bottom: 30px;
+}
+
+.caixaMensagem h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--verde);
+    letter-spacing: 2px;
+}
+
+/* ==========================
+   RODAPÉ
+========================== */
+
+footer {
+    background: var(--madeiraEscura);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.monograma {
+    width: 130px;
+    height: 130px;
+    border: 3px solid var(--dourado);
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    color: var(--dourado);
+    margin-bottom: 30px;
+}
+
+footer h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #ddd;
+    margin-top: 8px;
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+
+button,
+.botaoMapa,
+.botaoPresentes,
+.botaoWhatsapp {
+    transition: all .35s ease;
+}
+
+button:hover,
+.botaoMapa:hover,
+.botaoPresentes:hover,
+.botaoWhatsapp:hover {
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+}
+
+/* ==========================
+   ANIMAÇÕES
+========================== */
+
+.fade {
+    animation: fade 1s ease;
+}
+
+@keyframes fade {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.zoom {
+
+    animation: zoom 1s ease;
+
+}
+
+@keyframes zoom {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.85);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+.flutuar {
+
+    animation: flutuar 5s ease-in-out infinite;
+
+}
+
+@keyframes flutuar {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   DECORAÇÕES
+========================== */
+
+.decoracao-lavanda {
+
+    position: absolute;
+
+    width: 140px;
+
+    opacity: .18;
+
+    pointer-events: none;
+
+}
+
+.lavanda-esquerda {
+
+    left: 0;
+
+    top: 120px;
+
+}
+
+.lavanda-direita {
+
+    right: 0;
+
+    bottom: 120px;
+
+}
+
+/* ==========================
+   PARTÍCULAS
+========================== */
+
+.particula {
+
+    position: fixed;
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: rgba(199,168,87,.45);
+
+    pointer-events: none;
+
+    animation: subir 12s linear infinite;
+
+}
+
+@keyframes subir {
+
+    from {
+
+        transform: translateY(100vh);
+
+        opacity: 0;
+
+    }
+
+    15% {
+
+        opacity: 1;
+
+    }
+
+    85% {
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform: translateY(-120px);
+
+        opacity: 0;
+
+    }
+
+}
+
+/* ==========================
+   PARALLAX
+========================== */
+
+.parallax {
+
+    background-attachment: fixed;
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+}
+
+/* ===========================================================
+   ESTILO.CSS - PARTE 3B
+   Responsividade e ajustes finais
+=========================================================== */
+
+/* ==========================
+   TELAS GRANDES
+========================== */
+
+@media (min-width: 1600px) {
+
+    .container,
+    .timeline,
+    .fotos,
+    .mapa {
+        max-width: 1400px;
+    }
+
+    .tituloInicial h1 {
+        font-size: 110px;
+    }
+
+    .conteudoConvite h1 {
+        font-size: 96px;
+    }
+
+    #contador h2,
+    #historia h2,
+    #galeria h2,
+    #cerimonia h2,
+    #local h2,
+    #dresscode h2,
+    #presentes h2,
+    #confirmacao h2 {
+        font-size: 52px;
+    }
+}
+
+/* ==========================
+   NOTEBOOK / TABLET
+========================== */
+
+@media (max-width: 1024px) {
+
+    .conteudoConvite {
+        padding: 60px;
+    }
+
+    .conteudoConvite h1 {
+        font-size: 64px;
+    }
+
+    .tituloInicial h1 {
+        font-size: 72px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .item {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+    }
+
+    .contador div {
+        width: 140px;
+        height: 140px;
+    }
+
+    .card,
+    .dress div {
+        width: 100%;
+    }
+}
+
+/* ==========================
+   CELULARES
+========================== */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .tituloInicial h1 {
+        font-size: 54px;
+    }
+
+    .tituloInicial h2 {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .tituloInicial p {
+        font-size: 18px;
+        padding: 0 15px;
+    }
+
+    #abrirConvite {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .envelope {
+        width: 90%;
+    }
+
+    .conteudoConvite {
+        position: relative;
+        padding: 35px 25px;
+    }
+
+    .pergaminho img {
+        display: none;
+    }
+
+    .pergaminho {
+        background: #f9f1de;
+        border-radius: 20px;
+        box-shadow: var(--sombra);
+        padding: 20px;
+    }
+
+    .conteudoConvite h1 {
+        font-size: 46px;
+    }
+
+    .conteudoConvite h2 {
+        font-size: 24px;
+    }
+
+    .conteudoConvite h3 {
+        font-size: 18px;
+    }
+
+    .conteudoConvite p {
+        font-size: 17px;
+    }
+
+    .contador {
+        gap: 15px;
+    }
+
+    .contador div {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contador span {
+        font-size: 40px;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .item {
+        width: 100%;
+        margin: 0 0 30px 0 !important;
+    }
+
+    .fotos {
+        grid-template-columns: 1fr;
+    }
+
+    .fotos img {
+        height: 250px;
+    }
+
+    .cardsCerimonia,
+    .dress {
+        flex-direction: column;
+    }
+
+    .card,
+    .dress div {
+        width: 100%;
+    }
+
+    .caixaMensagem {
+        padding: 35px 25px;
+    }
+
+    .caixaMensagem h2 {
+        font-size: 46px;
+    }
+
+    footer h2 {
+        font-size: 42px;
+    }
+
+    .monograma {
+        width: 95px;
+        height: 95px;
+        font-size: 30px;
+    }
+
+    #musicButton {
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .decoracao-lavanda {
+        display: none;
+    }
+}
+
+/* ==========================
+   CELULARES PEQUENOS
+========================== */
+
+@media (max-width: 480px) {
+
+    .tituloInicial h1 {
+        font-size: 42px;
+    }
+
+    .tituloInicial p {
+        font-size: 16px;
+    }
+
+    .conteudoConvite h1 {
+        font-size: 38px;
+    }
+
+    .conteudoConvite span {
+        font-size: 34px;
+    }
+
+    .contador div {
+        width: 95px;
+        height: 95px;
+    }
+
+    .contador span {
+        font-size: 32px;
+    }
+
+    #contador h2,
+    #historia h2,
+    #galeria h2,
+    #cerimonia h2,
+    #local h2,
+    #dresscode h2,
+    #presentes h2,
+    #confirmacao h2 {
+        font-size: 30px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+}
+
+/* ==========================
+   IMAGENS
+========================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================
+   IFRAME
+========================== */
+
+iframe {
+    width: 100%;
+    border: 0;
+    display: block;
+}
+
+/* ==========================
+   TRANSIÇÕES
+========================== */
+
+section,
+.card,
+.item,
+.fotos img,
+.caixaMensagem,
+.pergaminho,
+.envelope {
+    transition: all .35s ease;
+}
+
+/* ==========================
+   SELEÇÃO DE TEXTO
+========================== */
+
+::selection {
+    background: var(--lavanda);
+    color: white;
+}
+
+/* ==========================
+   FOCO PARA ACESSIBILIDADE
+========================== */
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--dourado);
+    outline-offset: 3px;
+}
