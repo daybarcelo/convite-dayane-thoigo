@@ -1,1 +1,237 @@
+/* estilo.css
+   Convite Dayane & Thoigo
+   Tema: Rancho BarthĆ´ - Country Luxuoso
+*/
 
+/* ===== RESET ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f6f1e8;
+  color:#3d3228;
+  overflow-x:hidden;
+  line-height:1.6;
+}
+:root{
+ --madeira:#5c4033;
+ --madeiraEscura:#3b271c;
+ --lavanda:#a48cc8;
+ --creme:#f8f3ea;
+ --dourado:#c7a857;
+ --verde:#6d7b4b;
+ --sombra:0 15px 40px rgba(0,0,0,.18);
+}
+img{max-width:100%;display:block}
+.container{max-width:1200px;margin:auto;padding:0 20px}
+section{padding:100px 0}
+
+/* ===== MĆSICA ===== */
+#musicButton{
+ position:fixed;
+ right:20px;
+ bottom:20px;
+ width:60px;
+ height:60px;
+ border:none;
+ border-radius:50%;
+ background:var(--dourado);
+ color:#fff;
+ cursor:pointer;
+ z-index:9999;
+}
+
+/* ===== TELA INICIAL ===== */
+#inicio{
+ min-height:100vh;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+ background:url("img/fundo.jpg") center/cover no-repeat;
+ position:relative;
+}
+.overlay{
+ position:absolute;
+ inset:0;
+ background:rgba(0,0,0,.45);
+}
+.conteudoInicio{
+ position:relative;
+ z-index:2;
+ color:#fff;
+}
+.textoConvite{
+ font-family:'Cinzel',serif;
+ font-size:22px;
+ letter-spacing:2px;
+ margin-bottom:25px;
+}
+.envelope{
+ width:380px;
+ margin:20px auto;
+ cursor:pointer;
+ transition:.4s;
+}
+.envelope:hover{transform:scale(1.03)}
+#selo{
+ width:120px;
+ margin:-120px auto 0;
+ position:relative;
+}
+.toque{margin-top:30px;font-style:italic}
+
+/* ===== CONVITE ===== */
+#convite{display:none;background:#efe5d6}
+.pergaminho{max-width:900px;margin:auto;position:relative}
+.conteudoPergaminho{
+ position:absolute;
+ inset:0;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+ padding:60px;
+}
+.conteudoPergaminho h1{
+ font-family:'Great Vibes',cursive;
+ font-size:72px;
+}
+.linha{
+ width:120px;
+ height:3px;
+ background:var(--dourado);
+ margin:20px 0;
+}
+.informacoes{
+ display:flex;
+ gap:25px;
+ flex-wrap:wrap;
+ justify-content:center;
+ margin-top:25px;
+}
+
+/* ===== GALERIA ===== */
+.gridGaleria{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:20px;
+}
+.gridGaleria img{
+ border-radius:18px;
+ cursor:pointer;
+ transition:.3s;
+}
+.gridGaleria img:hover{transform:scale(1.03)}
+
+/* ===== CONTADOR ===== */
+.contador{
+ display:flex;
+ justify-content:center;
+ gap:20px;
+ flex-wrap:wrap;
+}
+.tempo{
+ background:#fff;
+ border-radius:20px;
+ padding:25px;
+ min-width:120px;
+ text-align:center;
+ box-shadow:var(--sombra);
+}
+.tempo span{
+ font-size:42px;
+ color:var(--dourado);
+ font-weight:bold;
+}
+
+/* ===== BOTĆ•ES ===== */
+.botao{
+ display:inline-block;
+ padding:16px 36px;
+ border-radius:40px;
+ background:var(--dourado);
+ color:#fff;
+ margin-top:25px;
+ text-decoration:none;
+}
+.whatsapp{background:#25D366}
+
+/* ===== LIGHTBOX ===== */
+.lightbox{
+ position:fixed;
+ inset:0;
+ display:none;
+ justify-content:center;
+ align-items:center;
+ background:rgba(0,0,0,.9);
+ z-index:99999;
+}
+.lightbox.mostrar{display:flex}
+.lightbox img{
+ max-width:90%;
+ max-height:90%;
+ border-radius:12px;
+}
+.fecharLightbox{
+ position:absolute;
+ top:20px;
+ right:30px;
+ background:none;
+ border:none;
+ color:#fff;
+ font-size:40px;
+ cursor:pointer;
+}
+
+/* ===== ANIMAĆ‡Ć•ES ===== */
+.quebrar{animation:quebrar .6s forwards}
+@keyframes quebrar{
+ to{transform:rotate(18deg) scale(.6);opacity:0}
+}
+section{
+ opacity:0;
+ transform:translateY(40px);
+ transition:.8s;
+}
+section.visivel{
+ opacity:1;
+ transform:translateY(0);
+}
+
+/* ===== RODAPĆ‰ ===== */
+footer{
+ background:var(--madeiraEscura);
+ color:#fff;
+ text-align:center;
+ padding:70px 20px;
+}
+.monograma{
+ width:110px;
+ height:110px;
+ margin:0 auto 25px;
+ border:2px solid var(--dourado);
+ border-radius:50%;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ font-size:36px;
+ font-family:'Cinzel',serif;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width:768px){
+ .conteudoPergaminho{
+   position:relative;
+   padding:30px;
+ }
+ .pergaminho>img{display:none}
+ .pergaminho{
+   background:#f9f1de;
+   border-radius:20px;
+   box-shadow:var(--sombra);
+ }
+ .conteudoPergaminho h1{font-size:48px}
+ .envelope{width:90%}
+}
